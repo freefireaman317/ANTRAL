@@ -38,26 +38,37 @@ const Home = () => {
       <section
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
         style={{
-          backgroundImage: `linear-gradient(rgba(139, 21, 56, 0.85), rgba(107, 15, 42, 0.9)), url('https://customer-assets.emergentagent.com/job_69c6dc65-dffc-4241-b53d-2659d06e0795/artifacts/elj0xhga_home%20page.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
+          background: 'linear-gradient(135deg, #8B1538 0%, #6B0F2A 50%, #4A0A1D 100%)'
         }}
       >
-        {/* Animated Background Elements */}
+        {/* Animated 3D Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white/5 rounded-full blur-3xl animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+          {/* Floating 3D Orbs */}
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-br from-white/10 to-transparent rounded-full blur-2xl animate-float" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-br from-white/8 to-transparent rounded-full blur-3xl animate-float-delayed" />
+          <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-to-br from-pink-300/5 to-transparent rounded-full blur-2xl animate-float-slow" />
+          
+          {/* 3D Grid Pattern */}
+          <div className="absolute inset-0 opacity-5" style={{
+            backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                            linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+            backgroundSize: '50px 50px',
+            transform: 'perspective(500px) rotateX(60deg)'
+          }} />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-          {/* Logo */}
-          <div className="mb-8 transform hover:scale-110 transition-transform duration-500">
-            <img
-              src="https://customer-assets.emergentagent.com/job_69c6dc65-dffc-4241-b53d-2659d06e0795/artifacts/el6nn5ur_background%20-%20Copy.jpg"
-              alt="ANTRAL MUN Logo"
-              className="h-24 sm:h-32 w-auto mx-auto drop-shadow-2xl"
-            />
+          {/* Logo with 3D Effect */}
+          <div className="mb-8 transform hover:scale-110 transition-all duration-700 animate-float-gentle">
+            <div className="relative">
+              <div className="absolute inset-0 bg-white/20 blur-xl rounded-full" />
+              <img
+                src="https://customer-assets.emergentagent.com/job_69c6dc65-dffc-4241-b53d-2659d06e0795/artifacts/el6nn5ur_background%20-%20Copy.jpg"
+                alt="ANTRAL MUN Logo"
+                className="h-24 sm:h-32 w-auto mx-auto drop-shadow-2xl relative z-10 transform hover:rotateY-12 transition-transform duration-700"
+                style={{ filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))' }}
+              />
+            </div>
           </div>
 
           {/* Title */}
@@ -78,17 +89,21 @@ const Home = () => {
             <CountdownTimer />
           </div>
 
-          {/* Register Button with 3D Animation */}
+          {/* Register Button with Enhanced 3D Animation */}
           <Link to="/register">
-            <button className="group relative px-10 py-5 bg-white text-[#8B1538] font-bold text-lg rounded-full overflow-hidden transform hover:scale-105 transition-all duration-300 shadow-2xl hover:shadow-white/20">
+            <button className="group relative px-10 py-5 bg-white text-[#8B1538] font-bold text-lg rounded-full overflow-hidden shadow-2xl hover:shadow-white/30 animate-pulse-glow">
               <span className="relative z-10 flex items-center justify-center space-x-2">
                 <span>REGISTER NOW</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-white/90 to-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
               
-              {/* 3D Pulse Animation */}
-              <div className="absolute inset-0 rounded-full bg-white animate-ping opacity-20" />
+              {/* Multiple layered 3D effects */}
+              <div className="absolute inset-0 bg-gradient-to-r from-pink-100 to-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
+              <div className="absolute -inset-1 bg-white rounded-full blur-md opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
+              <div className="absolute inset-0 rounded-full bg-white animate-ping-slow opacity-10" />
+              
+              {/* 3D Depth Shadow */}
+              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3/4 h-2 bg-black/30 blur-xl rounded-full group-hover:w-full transition-all duration-500" />
             </button>
           </Link>
 
