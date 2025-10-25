@@ -84,13 +84,15 @@ const Home = () => {
             </div>
           </div>
 
-          {/* Title */}
+          {/* Title with Sharp Typography */}
           <h1 className="text-5xl sm:text-7xl lg:text-8xl font-bold text-white mb-6 tracking-tight">
-            <span className="block mb-2">THE</span>
-            <span className="block bg-clip-text text-transparent bg-gradient-to-r from-white via-white to-white/80 drop-shadow-lg">
+            <span className="block mb-2 text-white/90">THE</span>
+            <span className="block text-white" style={{
+              textShadow: '0 4px 20px rgba(0,0,0,0.3), 0 0 40px rgba(255,255,255,0.1)'
+            }}>
               ANTRAL
             </span>
-            <span className="block text-4xl sm:text-5xl lg:text-6xl mt-2">MODEL UNITED NATIONS</span>
+            <span className="block text-4xl sm:text-5xl lg:text-6xl mt-3 text-white/95">MODEL UNITED NATIONS</span>
           </h1>
 
           <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl mx-auto">
