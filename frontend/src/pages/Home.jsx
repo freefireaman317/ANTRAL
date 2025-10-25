@@ -126,11 +126,22 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Features Section - Clean Design */}
+      <section className="py-24 bg-white relative overflow-hidden">
+        {/* Clean Background Accent */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-[#8B1538] to-transparent" />
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-br from-[#8B1538]/3 to-transparent rounded-full -mr-48 -mb-48" />
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-[#8B1538] mb-4">Why Attend ANTRAL MUN?</h2>
+            <h2 className="text-5xl font-bold mb-4" style={{
+              background: 'linear-gradient(135deg, #8B1538 0%, #A01844 50%, #6B0F2A 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              backgroundClip: 'text'
+            }}>
+              Why Attend ANTRAL MUN?
+            </h2>
             <p className="text-gray-600 text-lg max-w-2xl mx-auto">
               Experience world-class Model United Nations conference
             </p>
