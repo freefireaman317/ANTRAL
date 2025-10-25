@@ -104,21 +104,19 @@ const Home = () => {
             <CountdownTimer />
           </div>
 
-          {/* Register Button with Enhanced 3D Animation */}
+          {/* Register Button - Clean & Sharp */}
           <Link to="/register">
-            <button className="group relative px-10 py-5 bg-white text-[#8B1538] font-bold text-lg rounded-full overflow-hidden shadow-2xl hover:shadow-white/30 animate-pulse-glow">
-              <span className="relative z-10 flex items-center justify-center space-x-2">
+            <button className="group relative px-12 py-6 bg-white text-[#8B1538] font-bold text-xl rounded-full overflow-hidden shadow-2xl hover:shadow-[0_0_40px_rgba(255,255,255,0.3)] transition-all duration-500 transform hover:scale-110">
+              <span className="relative z-10 flex items-center justify-center space-x-3">
                 <span>REGISTER NOW</span>
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
+                <ArrowRight className="w-6 h-6 group-hover:translate-x-2 transition-transform duration-300" />
               </span>
               
-              {/* Multiple layered 3D effects */}
-              <div className="absolute inset-0 bg-gradient-to-r from-pink-100 to-white transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left" />
-              <div className="absolute -inset-1 bg-white rounded-full blur-md opacity-50 group-hover:opacity-75 transition-opacity duration-500" />
-              <div className="absolute inset-0 rounded-full bg-white animate-ping-slow opacity-10" />
+              {/* Clean Shine Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
               
-              {/* 3D Depth Shadow */}
-              <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-3/4 h-2 bg-black/30 blur-xl rounded-full group-hover:w-full transition-all duration-500" />
+              {/* Sharp 3D Depth */}
+              <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-3/4 h-3 bg-black/20 rounded-full" />
             </button>
           </Link>
 
