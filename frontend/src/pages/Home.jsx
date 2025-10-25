@@ -69,15 +69,17 @@ const Home = () => {
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
-          {/* Logo with 3D Effect */}
+          {/* Logo with Sharp 3D Effect */}
           <div className="mb-8 transform hover:scale-110 transition-all duration-700 animate-float-gentle">
-            <div className="relative">
-              <div className="absolute inset-0 bg-white/20 blur-xl rounded-full" />
+            <div className="relative inline-block">
+              {/* Sharp Shadow Layers */}
+              <div className="absolute -inset-2 bg-white/5 rounded-full transform translate-y-2 translate-x-2" />
+              <div className="absolute -inset-1 bg-white/10 rounded-full transform translate-y-1 translate-x-1" />
               <img
                 src="https://customer-assets.emergentagent.com/job_69c6dc65-dffc-4241-b53d-2659d06e0795/artifacts/el6nn5ur_background%20-%20Copy.jpg"
                 alt="ANTRAL MUN Logo"
-                className="h-24 sm:h-32 w-auto mx-auto drop-shadow-2xl relative z-10 transform hover:rotateY-12 transition-transform duration-700"
-                style={{ filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))' }}
+                className="h-28 sm:h-36 w-auto mx-auto relative z-10 transform hover:rotateY-12 transition-transform duration-700"
+                style={{ filter: 'drop-shadow(0 10px 30px rgba(0,0,0,0.5))' }}
               />
             </div>
           </div>
